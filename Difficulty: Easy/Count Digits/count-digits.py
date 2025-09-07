@@ -1,11 +1,11 @@
 class Solution:
     def evenlyDivides(self, n):
         count = 0
-        num = n   
+        num = str(n)   
         
-        while num > 0:
-            digit = num % 10
-            if digit != 0 and n % digit == 0:
+        for i in num:
+            if (int(i)==0):
+                continue
+            elif (n%int(i) == 0):
                 count += 1
-            num //= 10   
         return count
